@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d909106-4d0a-4b11-b821-c41321437edc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/projectiles/Laser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/towers/LaserGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/enemies/sans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/enemies/skeleton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/enemies/skeletonboss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/enemies/Sans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/enemies/Skeleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/enemies/SkeletonBoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/powerups/SlowPowerUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/enemies/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/level/Level1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/level/Level1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/projectiles/Projectile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/projectiles/Projectile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/towers/BombTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/towers/BombTower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/game/towers/Tower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/game/towers/Tower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TowerDefence/util/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefence/util/Reflection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/level/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/level/Level1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/projectiles/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/projectiles/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/towers/BombTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/towers/BombTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/towers/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/towers/Tower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/towers/LaserGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/towers/LaserGrid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +129,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
-  <component name="ProjectId" id="1ofBLZvQHH8DOndgwqvPyXR2ADN" />
+  <component name="ProjectId" id="1ofCiNkDEfwLkAwl56aHK3QObCh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -207,11 +220,8 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="util.Reflection" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="states" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sander\Documents\GitHub\TowerDefence\resources\tiles" />
@@ -219,12 +229,18 @@
       <recent name="C:\Users\sander\Documents\GitHub\TowerDefence\resources" />
       <recent name="C:\Users\sander\Documents\GitHub\TowerDefence\lib" />
     </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="util.Reflection" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="game.powerups" />
+      <recent name="game.enemies" />
+      <recent name="game.level" />
       <recent name="game.projectiles" />
       <recent name="game.towers" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="states" />
     </key>
   </component>
   <component name="RunManager" selected="Application.main">

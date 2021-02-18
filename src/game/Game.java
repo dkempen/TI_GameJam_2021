@@ -12,10 +12,12 @@ import ui.*;
 import ui.Button;
 import util.Reflection;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
@@ -40,6 +42,7 @@ public class Game {
 	private BufferedImage wood;
 	int gold = level.startingGold;
 	public int lives = level.lives;
+	public boolean slowed = false;
 	ui.Button sell;
 	ui.Button upgrade;
 
@@ -62,6 +65,7 @@ public class Game {
 		Image img =  new ImageIcon(this.getClass().getResource("/div/wood.png")).getImage();
 		wood = ((ToolkitImage) img).getBufferedImage();
 		chargePowerUps();
+		play(this.getClass().getResource("/music/shrek.wav").getFile());
 	}
 
 	private void chargePowerUps()
@@ -160,7 +164,7 @@ public class Game {
 					stateTime = 0;
 				}
 				for(Enemy e : enemies) {
-					e.update(elapsedTime);
+					e.update(elapsedTime, this.slowed);
 					if(e.pathNode == map.path.size()-1)
 					{
 						e.damage(9999999);
@@ -575,4 +579,18 @@ public class Game {
 		gold= i;
 	}
 	public void AddGold(int i){ gold+= i; }
+
+	public static void play(String filename)
+	{
+		try
+		{
+			Clip clip = AudioSystem.getClip();
+			clip.open(AudioSystem.getAudioInputStream(new File(filename)));
+			clip.start();
+		}
+		catch (Exception exc)
+		{
+			exc.printStackTrace(System.out);
+		}
+	}
 }

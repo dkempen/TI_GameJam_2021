@@ -1,5 +1,6 @@
 package game.level;
 
+
 /**
  * Created by johan on 2017-04-10.
  */
@@ -9,13 +10,8 @@ public class Level1 extends Level {
 
 		map = "map1.json";
 
-
-
-		waves.add(new Wave(1, 10, game.enemies.Wanderer.class));
-		waves.add(new Wave(0.25f, 10, game.enemies.Wanderer.class));
-		waves.add(new Wave(0.1f, 100, game.enemies.Wanderer.class));
-
-
-
+		waves.add(new Wave(2f, 20, game.enemies.Skeleton.class));
+		waves.add(new Wave(1f, 20, game.enemies.Sans.class));
+		waves.add(new Wave(1f, 1, game.enemies.SkeletonBoss.class));
 	}
 }

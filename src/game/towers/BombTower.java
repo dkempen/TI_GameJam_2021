@@ -13,7 +13,7 @@ public class BombTower extends Tower {
 		this.cost = 50;
 		this.range = 300;
 		this.fireDelay = 0.5;
-		this.dmg = 1;
+		this.dmg = 2;
 		this.upgradeCost = this.cost;
 	}
 

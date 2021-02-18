@@ -37,12 +37,19 @@ public class Enemy extends GameObject {
 	 * Updates the enemy, making it follow the path at a certain speed
 	 * @param elapsedTime Time elapsed since last update
 	 */
-	public void update(double elapsedTime)
+	public void update(double elapsedTime, boolean slowed)
 	{
 		Point target = map.path.get(pathNode);
 		target = new Point(target.x * 128 + 64,target.y * 128 + 64);
 
-		if(target.distance(x,y) < speed * elapsedTime)
+		double finalspeed = speed;
+
+		if (slowed)
+		{
+			finalspeed = finalspeed / 2;
+		}
+
+		if(target.distance(x,y) < finalspeed * elapsedTime)
 		{
 			pathNode++;
 		}
@@ -51,20 +58,20 @@ public class Enemy extends GameObject {
 			int direction = 0;
 			if(Math.abs(x - target.x) > Math.abs(y - target.y))
 				if(x < target.x) {
-					x += speed * elapsedTime;
+					x += finalspeed * elapsedTime;
 					direction = 2;
 				}
 				else {
-					x -= speed * elapsedTime;
+					x -= finalspeed * elapsedTime;
 					direction = 1;
 				}
 			else
 				if( y < target.y) {
-					y += speed * elapsedTime;
+					y += finalspeed * elapsedTime;
 					direction = 3;
 				}
 				else {
-					y -= speed * elapsedTime;
+					y -= finalspeed * elapsedTime;
 					direction = 0;
 				}
 

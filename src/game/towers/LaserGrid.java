@@ -9,7 +9,7 @@ public class LaserGrid extends Tower {
         super("/towers/ArrowTower2.png");
         this.cost = 50;
         this.range = 300;
-        this.fireDelay = 0.05;
+        this.fireDelay = 0.1;
         this.dmg = 1;
         this.upgradeCost = this.cost;
     }

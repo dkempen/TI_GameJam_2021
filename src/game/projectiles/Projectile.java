@@ -19,7 +19,6 @@ public abstract  class Projectile extends GameObject {
 		super(image, 1, 1);
 	}
 
-
 	@Override
 	public void update(double elapsedTime) {
 		double diffX = targetX - x;
