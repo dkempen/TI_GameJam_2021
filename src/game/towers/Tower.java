@@ -16,7 +16,7 @@ public abstract class Tower extends GameObject {
 
 	public int cost = 75;
 	protected double fireDelay = 0.25;
-	protected int dmg = 2;
+	protected int dmg = 6;
 	public int upgradeCost;
 	public int level = 1;
 	public double speedIncrease= 1.2;
@@ -24,7 +24,6 @@ public abstract class Tower extends GameObject {
 	public double costIncrease = 1.5;
 	protected double range = 200;
 	private double fireTimer = 0;
-
 
 
 	public Tower(String image) {
@@ -36,14 +35,22 @@ public abstract class Tower extends GameObject {
 		fireTimer -= elapsedTime;
 		if(fireTimer < 0)
 		{
+
 			ArrayList<Enemy> inRange = game.getEnemiesNear(new Point((int)x,(int)y), range);
 			if(!inRange.isEmpty())
 				shoot(inRange.get(0)); //TODO: pick random ones?
 
+
+			ArrayList<Tower> inRangeTower = game.getTowersNear(new Point((int)x, (int)y), range);
+			inRangeTower.remove(this);
+			if(!inRangeTower.isEmpty())
+				shoot(inRangeTower.get(0));
 			fireTimer = fireDelay;
 		}
 	}
-	public abstract void shoot(Enemy e);
+	public void shoot(Enemy e) {};
+
+	public void shoot(Tower t) {};
 
 	protected void shoot(Projectile projectile)
 	{
@@ -70,4 +77,6 @@ public abstract class Tower extends GameObject {
 	{
 		return dmg;
 	}
+
+
 }

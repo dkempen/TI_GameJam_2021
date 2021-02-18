@@ -519,6 +519,14 @@ public class Game {
 		return inRange;
 	}
 
+	public ArrayList<Tower> getTowersNear(Point p, double range)
+	{
+		ArrayList<Tower> inRange = new ArrayList<>();
+		for(Tower t : towers)
+			if(p.distance(t.x, t.y) < range)
+				inRange.add(t);
+		return inRange;
+	}
 
 	/**
 	 * Spawns an enemy. Don't call this if at the end of the wave
